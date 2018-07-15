@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -e
+. "$(dirname "$0")/.common.sh"
+
+: "${latest_deb:=$(dl_file "$(latest_deb_url)")}"
+
+unpack_deb "$DESTDIR" "$latest_deb"

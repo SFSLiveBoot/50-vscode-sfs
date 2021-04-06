@@ -3,7 +3,7 @@
 : "${lbu:=/opt/LiveBootUtils}"
 . "$lbu/scripts/common.func"
 
-: "${dl_url:=https://vscode-update.azurewebsites.net/latest/linux-deb-x64/stable}"
+: "${dl_url:=https://update.code.visualstudio.com/latest/linux-deb-x64/stable}"
 
 : "${pkg_json:=/usr/share/code/resources/app/package.json}"
 

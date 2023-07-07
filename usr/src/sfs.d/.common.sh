@@ -10,7 +10,7 @@
 latest_deb_url() {
   local n
   test -n "$_latest_deb_url" || for n in $(seq 10);do
-    _latest_deb_url="$(curl -s -I "${_latest_deb_url:-$dl_url}" | sed -ne '/^Location: /{s/.* //;p;q}' | tr -d '\r')"
+    _latest_deb_url="$(curl -s -I "${_latest_deb_url:-$dl_url}" | sed -ne '/^[lL]ocation: /{s/.* //;p;q}' | tr -d '\r')"
     case "$_latest_deb_url" in *.deb) break;; esac
   done
   echo "$_latest_deb_url"
